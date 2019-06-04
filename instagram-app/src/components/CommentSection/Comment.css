@@ -1,0 +1,38 @@
+ .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  
+  .comment-container {
+    text-align: left;
+    padding: 2px;
+    margin-left: 4px;
+    margin-bottom: 0.2rem;
+    width: 100%;
+  }
+ 
+  .username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .comment-form {
+    width: 96%;
+  }
+
+  .comment-input {
+    padding: 0.8rem;
+    margin: 0.2rem;
+    margin-left: 0.4rem;
+    padding-left: 0px;
+    outline: none;
+    font-size: 1rem;
+    border: none;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    background: #fafafa url(/assets/comment-input-dots.png) no-repeat 100% 50%;
+  }

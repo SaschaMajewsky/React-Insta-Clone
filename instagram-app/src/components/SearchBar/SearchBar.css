@@ -1,0 +1,68 @@
+  .nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .image-logo {
+    background: url(/assets/insta-logo-full.png) no-repeat 50% 100%;
+    width: 20rem;
+    height: 4rem;
+    cursor: pointer;
+    background-size: contain;
+  }
+
+  .navigation-search {
+    content: 'Search';
+    padding: 0.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    border: 2px solid rgba(169, 169, 169, 0.5);
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background: #fafafa url(/assets/symbol-search-bar-scope.PNG) no-repeat 32% 50%;
+  }
+
+  .navigation-search:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+  .navigation-search:focus {
+    color: rgba(116, 113, 113, 0.8);
+    background: none;
+  }
+
+  .menu-container {
+    display: flex;
+  }
+
+  .compass, .heart, .person {
+    margin: 1rem;
+    transform: scale(0.8);
+    width: 3vw;
+    height: 4rem;
+  }
+  
+  .compass:hover, .heart:hover, .person:hover {
+    transform: scale(1.0);
+    cursor: pointer;
+  }
+
+  .compass {
+    background: url(/assets/symbol-compass.png) no-repeat 50% 0;
+    background-size: contain;
+  }
+
+  .heart {
+    background: url(/assets/symbol-heart.png) no-repeat 50% 0;
+    background-size: contain;
+  }
+
+  .person {
+    background: url(/assets/symbol-person.png) no-repeat 50% 0;
+    background-size: contain;
+  }
