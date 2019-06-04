@@ -9,14 +9,28 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: [],
+      postsSelected: []
     };
   }
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+
+  searchPostsHandler = event => {
+    this.setState({ postsSelected: this.state.posts.filter(post => {
+      if (!post.username.includes(event.target.value)) {return false}
+      return post;
+      }) 
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer postsProperty={this.state.posts} />
+        <SearchBar searchProperty={this.searchPostsHandler} />
+        <PostContainer postsProperty={this.state.postsSelected.length > 0 ? this.state.postsSelected : this.state.posts} />
       </div>
     );
   }

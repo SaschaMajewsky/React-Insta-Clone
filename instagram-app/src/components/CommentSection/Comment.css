@@ -22,7 +22,7 @@
   }
 
   .interaction-heart {
-    background: #fafafa url(/assets/interaction-heart.png) no-repeat 100% 50%;
+    background: rgb(250, 250, 250) url(/assets/interaction-heart.png) no-repeat 100% 50%;
     width: 2rem;
   }
 
@@ -31,8 +31,12 @@
     cursor: pointer;
   }
 
+  .filled {
+    background: rgb(250, 250, 250) url(/assets/interaction-heart-red-filled.png) no-repeat 100% 50%;
+  }
+
   .interaction-quote {
-    background: #fafafa url(/assets/interaction-quote.png) no-repeat 100% 50%;
+    background: rgb(250, 250, 250) url(/assets/interaction-quote.png) no-repeat 100% 50%;
     width: 2rem;
   }
 
@@ -67,5 +71,5 @@
     border: none;
     border-top: 1px solid lightgrey;
     width: 100%;
-    background: #fafafa url(/assets/comment-input-dots.png) no-repeat 100% 50%;
+    background: rgb(250, 250, 250) url(/assets/comment-input-dots.png) no-repeat 100% 50%;
   }

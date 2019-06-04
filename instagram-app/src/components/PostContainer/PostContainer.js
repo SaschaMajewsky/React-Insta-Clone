@@ -6,7 +6,7 @@ import Post from './Post';
 const PostContainer = ({postsProperty}) => 
   ( <div className="container">
       {postsProperty.map(post => 
-      <Post postProperty={post} keyProperty={post.timestamp} />)}
+      <Post postProperty={post} key={post.timestamp} />)}
     </div>
   );
 

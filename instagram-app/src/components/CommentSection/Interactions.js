@@ -1,9 +1,9 @@
 import React from 'react';
 import './Comment.css';
 
-const Interactions = () => 
+const Interactions = ({setLikeProperty, isLikedProperty}) => 
   ( <div className="interactions-container">
-      <div className="interaction-heart"></div>
+      <div onClick={setLikeProperty} className={isLikedProperty ? "interaction-heart filled" : "interaction-heart"}></div>
       <div className="interaction-quote"></div>
     </div>
   );

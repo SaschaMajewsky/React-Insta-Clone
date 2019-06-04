@@ -1,11 +1,11 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => 
+const SearchBar = ({searchProperty}) => 
   (
     <div className="nav-container">
        <div className="image-logo"></div>
-        <input className="navigation-search" type="text" placeholder="Search" />
+        <input className="navigation-search" onKeyPress={searchProperty} type="text" placeholder="Search" />
         <div className="menu-container">
           <div className="compass"></div>
           <div className="heart"></div>

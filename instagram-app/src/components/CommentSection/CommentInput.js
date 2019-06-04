@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CommentInput = () => 
-  ( <form className="comment-form">
-      <input className="comment-input" type="text" placeholder="Add a comment... " />
+const CommentInput = ({submitComment, comment, changeComment}) => 
+  ( <form onSubmit={submitComment} className="comment-form">
+      <input className="comment-input" value={comment} onChange={changeComment} type="text" placeholder="Add a comment... " />
     </form>
   );
 
