@@ -4,11 +4,13 @@ import './Post.css';
 import CommentSection from '../CommentSection/CommentSectionContainer';
 import PostHeader from './PostHeader';
 
-const Post = ({postProperty: {username, thumbnailUrl, imageUrl, comments}}) => 
-  ( <div className="post-container">
+const Post = ({postProperty: {username, thumbnailUrl, imageUrl, comments, likes}}) => 
+  ( 
+  <div className="post-container">
+      console.log('likes', likes);
       <PostHeader usernameProperty={username} thumbnailUrlProperty={thumbnailUrl}/>
       <img className="post-image" src={imageUrl} alt="A preview of the post." />
-      <CommentSection comments={comments} />
+      <CommentSection commentsProperty={comments} likesProperty={likes} />
     </div>
   );
 
