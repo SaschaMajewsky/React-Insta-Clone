@@ -7,7 +7,6 @@ import PostHeader from './PostHeader';
 const Post = ({postProperty: {username, thumbnailUrl, imageUrl, comments, likes}}) => 
   ( 
   <div className="post-container">
-      console.log('likes', likes);
       <PostHeader usernameProperty={username} thumbnailUrlProperty={thumbnailUrl}/>
       <img className="post-image" src={imageUrl} alt="A preview of the post." />
       <CommentSection commentsProperty={comments} likesProperty={likes} />
