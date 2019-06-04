@@ -17,8 +17,8 @@
   .interactions-container {
     display: flex;
     width: 5rem;
-    background: red;
-    margin-left: 0.5rem;
+    height: 2rem;
+    margin-left: 0.3rem;
   }
 
   .interaction-heart {
@@ -26,13 +26,23 @@
     width: 2rem;
   }
 
+  .interaction-heart:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
   .interaction-quote {
     background: #fafafa url(/assets/interaction-quote.png) no-repeat 100% 50%;
     width: 2rem;
   }
 
+  .interaction-quote:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
   .likes {
-    margin: 0.5rem;
+    margin: 0.3rem;
     font-weight: bold;
     font-size: 1rem;
   }
