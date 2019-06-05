@@ -29,19 +29,38 @@ class CommentSection extends React.Component {
   handleCommentSubmit = event => {
     event.preventDefault();
     const comments = this.state.comments.slice();
-    comments.push({ text: this.state.comment, username: 'guest' });
+    comments.push({ id: this.getLastPostId() + 1, text: this.state.comment, username: 'guest' });
     this.setState({ comments, comment: '' });
     setTimeout(() => { this.setComments() }, 500);
   };
-
   setLiked = () => (this.setState({ isLiked: !this.state.isLiked, likes: this.state.isLiked ? this.state.likes - 1 : this.state.likes + 1 }));
+
+  deleteComment = (id) => {
+    this.setState({ comments: this.state.comments.filter(comment => {
+    if(comment.id === id) {return false}
+      return comment;
+    })
+    })
+    localStorage.setItem(this.state.id, JSON.stringify(this.state.comments.filter(comment => {
+      if(comment.id === id) {return false}
+        return comment;
+      })))
+  }; 
+
+  getLastPostId = () => {
+    let lastId = 0;
+    this.state.comments.forEach(comment => {
+      if(comment.id > lastId) {lastId = comment.id}
+    })
+    return lastId;
+  }
 
   render() {
     return (
       <div className="section-container">
         <Interactions setLikeProperty={this.setLiked} isLikedProperty={this.state.isLiked} iDProperty={this.id} />
         <Likes likesProperty={this.state.likes} />
-        {this.state.comments.map((comment, id) => <Comment commentProperty={comment} key={id}/>)}
+        {this.state.comments.map((comment, id) => <Comment commentProperty={comment} deleteCommentProperty={this.deleteComment} key={id}/>)}
         <CommentInput comment={this.state.comment} submitComment={this.handleCommentSubmit} changeComment={this.commentHandler}/>
       </div>
     );
