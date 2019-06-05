@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './Post.css';
 import Post from './Post';
 
-const PostContainer = ({postsProperty}) => 
+const PostContainer = ({postsProperty, usernameProperty}) => 
   ( <div className="container">
       {postsProperty.map(post => 
-      <Post postProperty={post} key={post.timestamp} />)}
+      <Post postProperty={post} key={post.timestamp} usernameProperty={usernameProperty} />)}
     </div>
   );
 
