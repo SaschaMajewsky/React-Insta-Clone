@@ -24,6 +24,8 @@ class CommentSection extends React.Component {
   
   setComments = () => (localStorage.setItem(this.state.id, JSON.stringify(this.state.comments)));
 
+  setLikes = () => (localStorage.setItem(this.state.id, JSON.stringify(this.state.likes)));
+
   commentHandler = event => (this.setState({ comment: event.target.value }));
 
   handleCommentSubmit = event => {
@@ -33,7 +35,13 @@ class CommentSection extends React.Component {
     this.setState({ comments, comment: '' });
     setTimeout(() => { this.setComments() }, 500);
   };
-  setLiked = () => (this.setState({ isLiked: !this.state.isLiked, likes: this.state.isLiked ? this.state.likes - 1 : this.state.likes + 1 }));
+  
+  setLiked = () => {this.setState({
+     isLiked: !this.state.isLiked,
+     likes: this.state.isLiked ? this.state.likes - 1 : this.state.likes + 1 }
+     );
+     /* this.setLikes(); */
+     };
 
   deleteComment = (id) => {
     this.setState({ comments: this.state.comments.filter(comment => {
