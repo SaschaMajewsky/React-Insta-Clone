@@ -33,7 +33,7 @@ class PostPage extends React.Component {
 
   searchPostsHandler = event => {
     this.setState({ postsSelected: this.state.posts.filter(post => {
-        if (!post.username.includes(event.target.value)) {return false}
+        if (!post.username.toLowerCase().includes(event.target.value.toLowerCase())) {return false}
         return post;
         }) 
     });
