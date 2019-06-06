@@ -14,7 +14,7 @@
     background-size: contain;
   }
 
-  .navigation-search {
+  /* .navigation-search {
     content: 'Search';
     padding: 0.3rem;
     padding-left: 2rem;
@@ -34,7 +34,7 @@
   .navigation-search:focus {
     color: rgba(116, 113, 113, 0.8);
     background: none;
-  }
+  } */
 
   .menu-container {
     display: flex;

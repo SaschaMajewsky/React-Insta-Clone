@@ -1,8 +1,9 @@
 import React from 'react';
+import CommentInputStyled from './../Styles/CommentInputStyled'
 
 const CommentInput = ({submitComment, comment, changeComment}) => 
   ( <form onSubmit={submitComment} className="comment-form">
-      <input className="comment-input" value={comment} onChange={changeComment} type="text" placeholder="Add a comment... " />
+      <CommentInputStyled className="comment-input" value={comment} onChange={changeComment} type="text" placeholder="Add a comment... " />
     </form>
   );
 

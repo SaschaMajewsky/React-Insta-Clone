@@ -61,6 +61,7 @@
     width: 96%;
   }
 
+/* 
   .comment-input {
     padding: 0.8rem;
     margin: 0.2rem;
@@ -73,7 +74,8 @@
     width: 100%;
     background: rgb(250, 250, 250) url(/assets/comment-input-dots.png) no-repeat 100% 50%;
   }
-
+ */
+ 
   .comment-deleteable {
     background: rgb(250, 250, 250) url(/assets/symbol-delete-comment.png) no-repeat 99% 50%;
     min-width: 80%;

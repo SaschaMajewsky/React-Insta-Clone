@@ -1,8 +1,8 @@
 import React from 'react';
 import './Login.css';
 import { FormGroup, Form } from 'reactstrap';
-import  LoginButton  from './../Styles/LoginButton'
-import  LoginInput  from './../Styles/LoginInput'
+import LoginButton from './../Styles/LoginButton'
+import LoginInput from './../Styles/LoginInput'
 
 class LoginPage extends React.Component {
   constructor(props) {
