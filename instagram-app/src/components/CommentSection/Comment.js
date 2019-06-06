@@ -7,7 +7,7 @@ const Comment = ({commentProperty: {id, username, text}, deleteCommentProperty, 
   ( <div className="comment-container">
       <span className="username">{username}</span>
       <span className="text"> {text}</span>
-      <span onClick={() => { deleteCommentProperty(id)}} className={username === usernameProperty ? "comment-deleteable" : ""}>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span onClick={() => { deleteCommentProperty(id)}} className={username === usernameProperty ? "comment-deleteable" : "hide"}>&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </div>
   );
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Login.css';
-import {FormGroup, Form, Input, Button } from 'reactstrap';
-
+import { FormGroup, Form } from 'reactstrap';
+import  LoginButton  from './../Styles/LoginButton'
+import  LoginInput  from './../Styles/LoginInput'
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -38,12 +39,12 @@ class LoginPage extends React.Component {
         <div className="first-opener">Login To Experience</div>
         <div className="project-title"></div>
         <FormGroup>
-          <Input className="input-username" value={this.state.username} type="text" onChange={this.handleInputChange} placeholder="Username" name="username" autoComplete="off" />
+          <LoginInput className="input-username" value={this.state.username} type="text" onChange={this.handleInputChange} placeholder="Username" name="username" autoComplete="off" />
         </FormGroup>
         <FormGroup>
-          <Input className="input-password" value={this.state.password} type="password" onChange={this.handleInputChange} placeholder="Password" name="password" autoComplete="off" />
+          <LoginInput className="input-password" value={this.state.password} type="password" onChange={this.handleInputChange} placeholder="Password" name="password" autoComplete="off" />
           <br />
-          <Button className="button-login" onClick={this.handleLoginSubmit}>Log In </Button>
+          <LoginButton primary className="button-login" onClick={this.handleLoginSubmit}>Log In </LoginButton>
         </FormGroup>
       </Form>
       </div>

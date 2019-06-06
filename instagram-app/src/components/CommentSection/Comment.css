@@ -81,6 +81,10 @@
     margin-left: 0.3rem;
   }
 
+  .hide {
+    display: none;
+  }
+
   .comment-deleteable:hover {
     cursor: pointer;
     -webkit-touch-callout: none; /* iOS Safari */
